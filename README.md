@@ -49,11 +49,11 @@ We also implemented stored procedures, triggers, assertions, and indexing to sup
 
 ## Files in This Repo
 
-- `Stage 1.docx` – Initial proposal and project outline
-- `Stage 2.docx` – Conceptual design and ER diagram
+- `Stage 1` – Initial proposal and project outline
+- `Stage 2` – Conceptual design and ER diagram
 - `Stage 3` docs – SQL schema, indexing, and advanced queries
-- `Stage 4.docx` – Stored procedures, triggers, and constraints
-- `Project Report.docx` – Summary of results and team contributions
+- `Stage 4` – Stored procedures, triggers, and constraints
+- `Project Report` – Summary of results and team contributions
 
 ## Team Contributions
 

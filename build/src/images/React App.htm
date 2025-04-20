@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="icon" href="http://192.168.1.89:3001/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://192.168.1.89:3001/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://192.168.1.89:3001/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <script defer="defer" src="React%20App_files/bundle.js"></script><style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'SpaceFont';
+  src: url(http://192.168.1.89:3001/static/media/EdgeOfTheGalaxyRegular-OVEa6.d0385c2c6369ca6f11ff.otf);
+}
+
+.grad {
+  background-color: black;
+  background-image: linear-gradient(35deg, rgb(45,150,216) 25%,rgb(0, 0, 0) 50%, rgb(250,95,31) 75%);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  filter: drop-shadow(0px 5px 5px black);
+
+  width: 100%;
+  height: 100px;
+}
+
+.row {
+  margin: 20px;
+  float: right;
+  filter: drop-shadow(0px 10px 5px black);
+}
+
+.titleimage {
+  position: static;
+  margin: 20px;
+  float: left;
+  height: 60px;
+}   
+
+.button_style {
+  margin: 15px;
+
+  font-family: 'SpaceFont';
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  transition: transform .5s ease;
+}
+
+.button_style:hover {
+  transform: scale(1.5);
+}
+
+.parallax {
+  /* The image used */
+  background-image: url(http://192.168.1.89:3001/static/media/rlcs_main.b2f5f39a0566812a520a.jpg);
+
+  /* Set a specific height */
+  height: 1080px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-bar {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.main-content {
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.button-block {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.events-list {
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.events-list h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.events-list ul {
+  list-style-type: disc;
+  margin: 10px;
+  padding: 0;
+}
+
+.events-list ul ul {
+  list-style-type: square;
+  margin-left: 40px;
+}
+
+.events-list li {
+  margin: 5px 0;
+}
+
+.events-schedule {
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.events-schedule h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.events-schedule ul {
+  list-style-type: disc;
+  padding: 0;
+}
+
+.events-schedule ul ul {
+  list-style-type: square;
+}
+
+.scheduleImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.highest_match_played {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top_scorer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0Usd0JBQXdCO0VBQ3hCLDRDQUFvRDtBQUN0RDs7QUFFQTtFQUNFLHVCQUF1QjtFQUN2QixrR0FBa0c7RUFDbEcsU0FBUztFQUNULE9BQU87RUFDUCxrQkFBa0I7RUFDbEIsUUFBUTtFQUNSLE1BQU07RUFDTixVQUFVO0VBQ1YsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixzQ0FBc0M7O0VBRXRDLFdBQVc7RUFDWCxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxZQUFZO0VBQ1osWUFBWTtFQUNaLHVDQUF1QztBQUN6Qzs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osV0FBVztFQUNYLFlBQVk7QUFDZDs7QUFFQTtFQUNFLFlBQVk7O0VBRVosd0JBQXdCO0VBQ3hCLHFCQUFxQjtFQUNyQixZQUFZO0VBQ1osZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osZUFBZTtFQUNmLGtCQUFrQjtFQUNsQiw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxtQkFBbUI7RUFDbkIseURBQStDOztFQUUvQywwQkFBMEI7RUFDMUIsY0FBYzs7RUFFZCx5Q0FBeUM7RUFDekMsNEJBQTRCO0VBQzVCLDJCQUEyQjtFQUMzQiw0QkFBNEI7RUFDNUIsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UseUJBQXlCO0VBQ3pCLFlBQVk7RUFDWixhQUFhO0VBQ2IsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxVQUFVO0VBQ1YseUJBQXlCO0VBQ3pCLGFBQWE7QUFDZjs7QUFFQTtFQUNFLFVBQVU7RUFDVixhQUFhO0VBQ2IsYUFBYTtFQUNiLHNCQUFzQjtFQUN0Qix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsYUFBYTtFQUNiLGNBQWM7RUFDZCxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtFQUNuQixrQkFBa0I7QUFDcEI7OztBQUdBO0VBQ0UscUJBQXFCO0VBQ3JCLFlBQVk7RUFDWixVQUFVO0FBQ1o7O0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsVUFBVTtBQUNaOztBQUVBO0VBQ0UsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UsY0FBYztFQUNkLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsVUFBVTtBQUNaOztBQUVBO0VBQ0UsY0FBYztFQUNkLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQiIsInNvdXJjZXNDb250ZW50IjpbIi5BcHAge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ1NwYWNlRm9udCc7XG4gIHNyYzogdXJsKFwiLi9mb250cy9FZGdlT2ZUaGVHYWxheHlSZWd1bGFyLU9WRWE2Lm90ZlwiKTtcbn1cblxuLmdyYWQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KDM1ZGVnLCByZ2IoNDUsMTUwLDIxNikgMjUlLHJnYigwLCAwLCAwKSA1MCUsIHJnYigyNTAsOTUsMzEpIDc1JSk7XG4gIGJvdHRvbTogMDtcbiAgbGVmdDogMDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICByaWdodDogMDtcbiAgdG9wOiAwO1xuICB6LWluZGV4OiAxO1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggNXB4IDVweCBibGFjayk7XG5cbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwcHg7XG59XG5cbi5yb3cge1xuICBtYXJnaW46IDIwcHg7XG4gIGZsb2F0OiByaWdodDtcbiAgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggMTBweCA1cHggYmxhY2spO1xufVxuXG4udGl0bGVpbWFnZSB7XG4gIHBvc2l0aW9uOiBzdGF0aWM7XG4gIG1hcmdpbjogMjBweDtcbiAgZmxvYXQ6IGxlZnQ7XG4gIGhlaWdodDogNjBweDtcbn0gICBcblxuLmJ1dHRvbl9zdHlsZSB7XG4gIG1hcmdpbjogMTVweDtcblxuICBmb250LWZhbWlseTogJ1NwYWNlRm9udCc7XG4gIGxldHRlci1zcGFjaW5nOiAwLjVweDtcbiAgYm9yZGVyOiBub25lO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGJhY2tncm91bmQ6IG5vbmU7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC1zaXplOiAyNHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHRyYW5zaXRpb246IHRyYW5zZm9ybSAuNXMgZWFzZTtcbn1cblxuLmJ1dHRvbl9zdHlsZTpob3ZlciB7XG4gIHRyYW5zZm9ybTogc2NhbGUoMS41KTtcbn1cblxuLnBhcmFsbGF4IHtcbiAgLyogVGhlIGltYWdlIHVzZWQgKi9cbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuL2ltYWdlcy9ybGNzX21haW4uanBnJyk7XG5cbiAgLyogU2V0IGEgc3BlY2lmaWMgaGVpZ2h0ICovXG4gIGhlaWdodDogMTA4MHB4O1xuXG4gIC8qIENyZWF0ZSB0aGUgcGFyYWxsYXggc2Nyb2xsaW5nIGVmZmVjdCAqL1xuICBiYWNrZ3JvdW5kLWF0dGFjaG1lbnQ6IGZpeGVkO1xuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59XG5cbi5oZWFkZXItYmFyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzI4MmMzNDtcbiAgY29sb3I6IHdoaXRlO1xuICBwYWRkaW5nOiAyMHB4O1xuICBmb250LXNpemU6IDEuNWVtO1xufVxuXG4uY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIG1hcmdpbjogMjBweDtcbn1cblxuLnNpZGViYXIge1xuICB3aWR0aDogMjAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjBmMGYwO1xuICBwYWRkaW5nOiAyMHB4O1xufVxuXG4ubWFpbi1jb250ZW50IHtcbiAgd2lkdGg6IDgwJTtcbiAgcGFkZGluZzogMjBweDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG59XG5cbi5idXR0b24tYmxvY2sge1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogMTBweDtcbiAgbWFyZ2luOiAxMHB4IDA7XG4gIGZvbnQtc2l6ZTogMWVtO1xufVxuXG4uZXZlbnRzLWxpc3Qge1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luOiAyMHB4O1xuICBwYWRkaW5nOiAxMHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCAjZGRkO1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmOWY5Zjk7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG59XG5cbi5ldmVudHMtbGlzdCBoMiB7XG4gIGZvbnQtc2l6ZTogMS44ZW07XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuXG4uZXZlbnRzLWxpc3QgdWwge1xuICBsaXN0LXN0eWxlLXR5cGU6IGRpc2M7XG4gIG1hcmdpbjogMTBweDtcbiAgcGFkZGluZzogMDtcbn1cblxuLmV2ZW50cy1saXN0IHVsIHVsIHtcbiAgbGlzdC1zdHlsZS10eXBlOiBzcXVhcmU7XG4gIG1hcmdpbi1sZWZ0OiA0MHB4O1xufVxuXG4uZXZlbnRzLWxpc3QgbGkge1xuICBtYXJnaW46IDVweCAwO1xufVxuXG4uZXZlbnRzLXNjaGVkdWxlIHtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbjogMjBweDtcbiAgcGFkZGluZzogMTBweDtcbiAgYm9yZGVyLXJhZGl1czogOHB4O1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xufVxuXG4uZXZlbnRzLXNjaGVkdWxlIGgyIHtcbiAgZm9udC1zaXplOiAxLjhlbTtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbn1cblxuLmV2ZW50cy1zY2hlZHVsZSB1bCB7XG4gIGxpc3Qtc3R5bGUtdHlwZTogZGlzYztcbiAgcGFkZGluZzogMDtcbn1cblxuLmV2ZW50cy1zY2hlZHVsZSB1bCB1bCB7XG4gIGxpc3Qtc3R5bGUtdHlwZTogc3F1YXJlO1xufVxuXG4uc2NoZWR1bGVJbWFnZSB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tbGVmdDogYXV0bztcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xuICB3aWR0aDogODAlO1xufVxuXG4uaGlnaGVzdF9tYXRjaF9wbGF5ZWQge1xuICBkaXNwbGF5OiBibG9jaztcbiAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gIG1hcmdpbi1yaWdodDogYXV0bztcbn1cblxuLnRvcF9zY29yZXIge1xuICBkaXNwbGF5OiBibG9jaztcbiAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gIG1hcmdpbi1yaWdodDogYXV0bztcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><div class="grad"><img class="titleimage" src="React%20App_files/rlcs_logo.806cd1a6fef8b412ed7a.webp" alt="RLCS Logo"><div class="row"><button class="button_style">Home</button><button class="button_style">Season Format</button><button class="button_style">Season Schedule</button><button class="button_style">Highest Matches Played</button><button class="button_style">Top Scorer</button></div></div><div class="parallax"></div><header class="header-bar" id="home">Rocket League Championship Series</header><div class="content"><aside class="sidebar">Sidebar content<p>Will add more stuff later on</p></aside><div class="main-content"><div class="events-list" id="season_format"><h2>Season Format</h2><ul><h3>Fall Split</h3><ul><li>Regionals 1, 2, 3 (All regions - Invitational Qualifiers, Closed Qualifiers, Main Events)</li><li>Fall Major - Asia-Pacific Qualifier</li><li>Fall Major - North America Tiebreaker (Complexity Gaming vs. Spacestation Gaming)</li><li>Fall Major - Main Events</li></ul><h3>Winter Split</h3><ul><li>Regionals 1, 2, 3 (All regions - Closed Qualifiers and Main Events)</li><li>Winter Major - Asia-Pacific Qualifier</li><li>Winter Major - Main Events</li></ul><h3>Spring Split</h3><ul><li>Regional 1, 2, 3 (All regions - Closed Qualifiers and Main Events)</li><li>Spring Major - Asia-Pacific Qualifier</li><li>Spring Major - Main Event</li></ul><h3>World Championship</h3><ul><li>Wildcard Stage (Play-In)</li><li>Group Stage</li><li>Playoffs</li></ul></ul></div><div class="events-schedule" id="season_schedule"><h2>Season Schedule</h2><ul><h3>Fall Split</h3><ul>October 15 - 17: Regional #1 NA, MENA, OCE, APAC S</ul><ul>October 22 - 24: Regional #1 EU, SAM, APAC N</ul><ul>October 29 - 31: Regional #2 NA, MENA, OCE, APAC S</ul><ul>November 5 - 7: Regional #2 EU, SAM, APAC N</ul><ul>November 12 - 14: Regional #3 NA, MENA, OCE, APAC S</ul><ul>November 19 - 21: Regional #3 EU, SAM, APAC N</ul><ul>December 8 - 12: Major</ul><ul>December 13, 2021 - January 2, 2022: Transfer Window</ul><br><h3>Winter Split</h3><ul>January 14 - 16: Regional #1 NA, MENA, OCE, APAC S</ul><ul>January 21 - 23: Regional #1 EU, SAM, APAC N</ul><ul>January 28 - 30: Regional #2 NA, MENA, OCE, APAC S</ul><ul>February 4 - 6: Regional #2 EU, SAM, APAC N</ul><ul>February 18 - 20: Regional #3 NA, MENA, OCE, APAC S</ul><ul>February 25 - 27: Regional #3 EU, SAM, APAC N</ul><ul>March 24 - 27: Major</ul><ul>March 28 - April 17: Transfer Window</ul><h3>Spring Split</h3><ul>April 29 - May 1: Regional #1 NA, MENA, OCE, APAC S</ul><ul>May 6 - 8: Regional #1 EU, SAM, APAC N</ul><ul>May 13 - 15: Regional #2 NA, MENA, OCE, APAC S</ul><ul>May 20 - 22: Regional #2 EU, SAM, APAC N</ul><ul>May 27 - 29: Regional #3 NA, MENA, OCE, APAC S</ul><ul>June 3 - 5: Regional #3 EU, SAM, APAC N</ul><ul>June 30 - July 3: Major</ul><h3>World Championship</h3><ul>July 22 - 24: Wildcard</ul><ul>July 26 - 31: Main Event</ul></ul></div><img class="scheduleImage" src="React%20App_files/RLCS_Format.7ec1aa3829f9002a202e.jpg" alt="RLCS 2021-2022 Schedule"><div class="highest_match_played"><h2>Highest Number of Matches Played</h2><table id="highest_match_played"><thead><tr><th>Player Name</th><th>Matches Played</th></tr></thead><tbody><tr>
+                    <td>Scout</td>
+                    <td>308</td>
+                </tr><tr>
+                    <td>Tobee</td>
+                    <td>308</td>
+                </tr><tr>
+                    <td>Shmoopernator</td>
+                    <td>308</td>
+                </tr><tr>
+                    <td>cavemanben</td>
+                    <td>225</td>
+                </tr><tr>
+                    <td>Siki</td>
+                    <td>210</td>
+                </tr><tr>
+                    <td>Decka</td>
+                    <td>210</td>
+                </tr><tr>
+                    <td>Smash</td>
+                    <td>204</td>
+                </tr><tr>
+                    <td>Viic</td>
+                    <td>204</td>
+                </tr><tr>
+                    <td>RoToR</td>
+                    <td>204</td>
+                </tr><tr>
+                    <td>Snowy</td>
+                    <td>200</td>
+                </tr><tr>
+                    <td>Cobbo</td>
+                    <td>200</td>
+                </tr><tr>
+                    <td>vortexioz</td>
+                    <td>200</td>
+                </tr><tr>
+                    <td>LionBlaze</td>
+                    <td>190</td>
+                </tr><tr>
+                    <td>Roll Dizz</td>
+                    <td>190</td>
+                </tr><tr>
+                    <td>Shock</td>
+                    <td>190</td>
+                </tr><tr>
+                    <td>Scout</td>
+                    <td>308</td>
+                </tr><tr>
+                    <td>Tobee</td>
+                    <td>308</td>
+                </tr><tr>
+                    <td>Shmoopernator</td>
+                    <td>308</td>
+                </tr><tr>
+                    <td>cavemanben</td>
+                    <td>225</td>
+                </tr><tr>
+                    <td>Siki</td>
+                    <td>210</td>
+                </tr><tr>
+                    <td>Decka</td>
+                    <td>210</td>
+                </tr><tr>
+                    <td>Smash</td>
+                    <td>204</td>
+                </tr><tr>
+                    <td>Viic</td>
+                    <td>204</td>
+                </tr><tr>
+                    <td>RoToR</td>
+                    <td>204</td>
+                </tr><tr>
+                    <td>Snowy</td>
+                    <td>200</td>
+                </tr><tr>
+                    <td>Cobbo</td>
+                    <td>200</td>
+                </tr><tr>
+                    <td>vortexioz</td>
+                    <td>200</td>
+                </tr><tr>
+                    <td>LionBlaze</td>
+                    <td>190</td>
+                </tr><tr>
+                    <td>Roll Dizz</td>
+                    <td>190</td>
+                </tr><tr>
+                    <td>Shock</td>
+                    <td>190</td>
+                </tr></tbody></table></div><div class="top_scorer"><h2>Top Scorer</h2><table id="top_scorer"><thead><tr><th>Player Name</th><th>Total Goals Scored</th></tr></thead><tbody><tr>
+                    <td>Shogo Ikeyama</td>
+                    <td>354</td>
+                </tr><tr>
+                    <td>Shoki Minamigawa</td>
+                    <td>348</td>
+                </tr><tr>
+                    <td>Finlay Ferguson</td>
+                    <td>344</td>
+                </tr><tr>
+                    <td>Ahmad Abdullah</td>
+                    <td>341</td>
+                </tr><tr>
+                    <td>Louis Christian Thamrun</td>
+                    <td>334</td>
+                </tr><tr>
+                    <td>Reed Wilen</td>
+                    <td>315</td>
+                </tr><tr>
+                    <td>Axel Touret</td>
+                    <td>311</td>
+                </tr><tr>
+                    <td>David Morgenrood</td>
+                    <td>306</td>
+                </tr><tr>
+                    <td>Gareth Spiers</td>
+                    <td>304</td>
+                </tr><tr>
+                    <td>Mohammed Alotaibi</td>
+                    <td>302</td>
+                </tr><tr>
+                    <td>Max Ng</td>
+                    <td>297</td>
+                </tr><tr>
+                    <td>Jason Corral</td>
+                    <td>295</td>
+                </tr><tr>
+                    <td>Enzo Grondein</td>
+                    <td>294</td>
+                </tr><tr>
+                    <td>Gabriel Vieira Cardoso</td>
+                    <td>284</td>
+                </tr><tr>
+                    <td>Yan Nolasco</td>
+                    <td>284</td>
+                </tr><tr>
+                    <td>Shogo Ikeyama</td>
+                    <td>354</td>
+                </tr><tr>
+                    <td>Shoki Minamigawa</td>
+                    <td>348</td>
+                </tr><tr>
+                    <td>Finlay Ferguson</td>
+                    <td>344</td>
+                </tr><tr>
+                    <td>Ahmad Abdullah</td>
+                    <td>341</td>
+                </tr><tr>
+                    <td>Louis Christian Thamrun</td>
+                    <td>334</td>
+                </tr><tr>
+                    <td>Reed Wilen</td>
+                    <td>315</td>
+                </tr><tr>
+                    <td>Axel Touret</td>
+                    <td>311</td>
+                </tr><tr>
+                    <td>David Morgenrood</td>
+                    <td>306</td>
+                </tr><tr>
+                    <td>Gareth Spiers</td>
+                    <td>304</td>
+                </tr><tr>
+                    <td>Mohammed Alotaibi</td>
+                    <td>302</td>
+                </tr><tr>
+                    <td>Max Ng</td>
+                    <td>297</td>
+                </tr><tr>
+                    <td>Jason Corral</td>
+                    <td>295</td>
+                </tr><tr>
+                    <td>Enzo Grondein</td>
+                    <td>294</td>
+                </tr><tr>
+                    <td>Gabriel Vieira Cardoso</td>
+                    <td>284</td>
+                </tr><tr>
+                    <td>Yan Nolasco</td>
+                    <td>284</td>
+                </tr></tbody></table></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+</body></html>

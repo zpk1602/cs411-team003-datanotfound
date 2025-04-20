@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'SpaceFont';
+    src: url("../fonts/EdgeOfTheGalaxyRegular-OVEa6.otf");
+  }
+  
+    
+    .display {
+      width: inherit;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(255, 255, 255);
+      color: rgb(3, 18, 33);
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: auto hidden;
+    }
+    
+    
+  
+    .display_table {
+      width: inherit;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid rgb(214, 218, 222);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(255, 255, 255);
+      color: rgb(3, 18, 33);
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: auto hidden;
+    }
+    
+    .display_table table {
+      display: table;
+      border-collapse: collapse;
+      border-spacing: 0px;
+      background-color: transparent;
+      box-sizing: border-box;
+      color: rgb(3, 18, 33);
+      margin-bottom: 20px;
+    }
+    
+    th, td {
+      padding: 12px 15px;
+      text-align: right;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    tbody tr:hover {
+      background-color: #ddd;
+    }
+  
+    .display_table table thead {
+      display: table-header-group;
+      box-sizing: border-box;
+      color: black;
+    }
+    
+    .display_table table thead tr {
+      color: inherit;
+      display: table-row;
+      vertical-align: middle;
+      outline: 0px;
+      font-style: "Space_Font";
+    }
+    
+    .table_title {
+      padding-top: 50px;
+      text-align: left;
+    }
+    
+    .display_table table thead tr th {
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 2.1rem;
+      letter-spacing: 0.0125em;
+      display: table-cell;
+      vertical-align: inherit;
+      border-bottom: 1px solid rgb(224, 224, 224);
+      text-align: right;
+      padding: 16px;
+    }
+    
+    .display_table table tbody {
+      text-align: right;
+    }
+    
+    .pagination {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .pagination button {
+      padding: 10px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    
+    .pagination button.active {
+      background-color: #007bff;
+      color: white;
+    }
+    
+    .pagination button:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+    
+    .pagination button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    
+    .pagination button:first-child,
+    .pagination button:last-child {
+      border-radius: 50%;
+    }

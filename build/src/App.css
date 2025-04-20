@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'SpaceFont';
+  src: url("./fonts/EdgeOfTheGalaxyRegular-OVEa6.otf");
+}
+
+.grad {
+  background-color: rgb(45,150,216);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  filter: drop-shadow(0px 5px 5px black);
+
+  width: 100%;
+  height: 100px;
+}
+
+.row {
+  margin: 20px;
+  float: right;
+  filter: drop-shadow(0px 10px 5px black);
+  display: flex;
+  align-items: center;
+}
+
+.titleimage {
+  position: static;
+  margin: 20px;
+  float: left;
+  height: 60px;
+}   
+
+.button_style {
+  margin: 15px;
+
+  font-family: 'SpaceFont';
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  transition: transform .5s ease;
+}
+
+.button_style:hover {
+  transform: scale(1.5);
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('./images/rlcs_main.jpg');
+
+  /* Set a specific height */
+  height: 1080px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-bar {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.main-content {
+  display: block;
+  width: 80%;
+  padding: 20px;
+}
